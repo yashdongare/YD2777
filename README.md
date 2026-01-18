@@ -2,30 +2,29 @@
 <h3 align="center">🚀 Frontend Developer | AI Explorer | Builder from India 🇮🇳</h3>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=yd2777&label=Profile%20Views&color=6A5ACD&style=for-the-badge" />
+  <img src="https://komarev.com/ghpvc/?username=yd2777&label=Profile%20Views&color=blueviolet&style=for-the-badge" />
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=6A5ACD&center=true&vCenter=true&width=650&lines=Building+AI-powered+Web+Apps;Frontend+Developer+with+Vision;Learning+SQL+%26+NoSQL;Future+Full-Stack+Engineer" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=6A5ACD&center=true&vCenter=true&width=600&lines=Building+AI-powered+Web+Apps;Frontend+Developer+with+Vision;Learning+SQL+%26+NoSQL;Future+Full-Stack+Engineer" />
 </p>
 
 ---
 
 ## 🧠 About Me (AI Mode)
 - 🔭 Currently building **AI Agentic Tracker**
-- 🌱 Learning **SQL & NoSQL**
-- 🤖 Exploring **AI + Frontend Automation**
+- 🌱 Learning **SQL & NoSQL Databases**
+- 🧩 Exploring **AI + Frontend Automation**
 - 👯 Open to collaborate on **GFX Clothing Brand**
 - 💬 Ask me about **learning things fast & smart**
 - 📫 Reach me at **ydongare043@gmail.com**
 
 ---
 
-## 🤖 Featured AI Project
-### 🚀 AI Agentic Tracker
-> Smart AI-based tracking & automation system  
-🛠 Tech: HTML, CSS, JS, Python, Flask  
-🌐 Deployment: *Coming Soon*
+## 🤖 AI Projects
+🚀 **AI Agentic Tracker**  
+> A smart AI-based tracking & automation system  
+🔗 *(Local Dev → Will be Deployed Soon)*
 
 ---
 
@@ -40,12 +39,12 @@
 
 ## 🛠 Tech Stack
 <p align="left">
-  <img src="https://skillicons.dev/icons?i=html,css,js,python,flask,mysql,aws,figma,linux,unity,unreal,blender" />
+<img src="https://skillicons.dev/icons?i=html,css,js,python,flask,mysql,aws,figma,linux,unity,unreal,blender" />
 </p>
 
 ---
 
-## 📊 GitHub AI Analytics
+## 📊 AI GitHub Analytics
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=yd2777&show_icons=true&theme=tokyonight&hide_border=true" />
 </p>
@@ -60,9 +59,9 @@
 
 ---
 
-## 📈 Contribution Graph (FIXED ✅)
+## 📈 Contribution Graph
 <p align="center">
-  <img src="https://github-readme-activity-graph.cyclic.app/graph?username=yd2777&theme=tokyo-night&hide_border=true" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=yd2777&theme=tokyo-night" />
 </p>
 
 ---
@@ -72,4 +71,4 @@
 
 ---
 
-⭐ **Follow me for AI, Frontend & Automation projects**
+⭐ **If you like my work, give a star & follow — AI builders grow together**
