@@ -29,7 +29,7 @@
 ---
 
 ## 📫 Connect With Me
-- 🌐 GitHub: https://github.com/USERNAME  
+- 🌐 GitHub: https://github.com/YD777.github 
 - 💼 LinkedIn: (add later)  
 - 📧 Email: (optional)
 
