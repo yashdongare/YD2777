@@ -1,74 +1,153 @@
-<h1 align="center">👋 Hi, I'm Yashvardhan Dongare</h1>
-<h3 align="center">🚀 Frontend Developer | AI Explorer | Builder from India 🇮🇳</h3>
+# AI ML Studio — Machine Learning Project Showcase
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=yd2777&label=Profile%20Views&color=blueviolet&style=for-the-badge" />
-</p>
+A single, unified dashboard presenting five machine learning demo applications:
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=6A5ACD&center=true&vCenter=true&width=600&lines=Building+AI-powered+Web+Apps;Frontend+Developer+with+Vision;Learning+SQL+%26+NoSQL;Future+Full-Stack+Engineer" />
-</p>
+1. **House Price Prediction** — Linear Regression
+2. **Customer Segmentation** — K-Means Clustering
+3. **Cat vs Dog Classification** — Support Vector Machine (SVM)
+4. **Hand Gesture Recognition** — Computer Vision / Gesture Classification
+5. **Food Recognition & Calorie Estimation** — Image Classification
 
----
-
-## 🧠 About Me (AI Mode)
-- 🔭 Currently building **AI Agentic Tracker**
-- 🌱 Learning **SQL & NoSQL Databases**
-- 🧩 Exploring **AI + Frontend Automation**
-- 👯 Open to collaborate on **GFX Clothing Brand**
-- 💬 Ask me about **learning things fast & smart**
-- 📫 Reach me at **ydongare043@gmail.com**
+Built with React, Vite, Tailwind CSS, Recharts and Lucide icons. Includes a guided **Jury Demo Mode** for
+live presentation to a professor or panel.
 
 ---
 
-## 🤖 AI Projects
-🚀 **AI Agentic Tracker**  
-> A smart AI-based tracking & automation system  
-🔗 *(Local Dev → Will be Deployed Soon)*
+## 1. Install & Run (VS Code)
+
+**Requirements:** Node.js 18+ and npm.
+
+```bash
+# 1. Open this folder in VS Code
+code ai-ml-studio
+
+# 2. Open a terminal in VS Code (Terminal → New Terminal) and install dependencies
+npm install
+
+# 3. Start the dev server
+npm run dev
+```
+
+The terminal will print a local URL — usually **http://localhost:5173**. Open it in your browser.
+
+To build a production bundle:
+
+```bash
+npm run build
+npm run preview   # serve the production build locally
+```
 
 ---
 
-## 🌐 Connect With Me
-<p align="left">
-<a href="https://www.instagram.com/yaxhvd_.77/" target="_blank">
-<img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" width="40"/>
-</a>
-</p>
+## 2. Project Structure
+
+```
+ai-ml-studio/
+├── index.html
+├── package.json
+├── vite.config.js
+├── tailwind.config.js
+├── postcss.config.js
+├── README.md
+└── src/
+    ├── main.jsx              # App entry, router setup
+    ├── App.jsx                # Route table + shared layout (sidebar/topbar)
+    ├── index.css               # Tailwind layers + design tokens (glass, buttons, inputs)
+    ├── lib/
+    │   └── demoEngine.js       # All simulated "model" logic lives here (see below)
+    ├── data/
+    │   └── projects.js         # Shared metadata: project list, nav items, methodology steps
+    ├── components/
+    │   ├── Sidebar.jsx
+    │   ├── Topbar.jsx
+    │   ├── UI.jsx               # PageHeader, DemoBadge, DemoNotice, BackendNotice, StatCard
+    │   └── JuryDemoMode.jsx     # Guided walkthrough modal (Start Jury Demo)
+    └── pages/
+        ├── Home.jsx             # Landing page (hero + 5 project cards)
+        ├── Dashboard.jsx        # Stats, charts, recent projects
+        ├── HousePrice.jsx       # Task 01
+        ├── CustomerSegmentation.jsx  # Task 02
+        ├── CatDog.jsx           # Task 03
+        ├── HandGesture.jsx      # Task 04
+        ├── FoodRecognition.jsx  # Task 05
+        ├── Results.jsx          # Status table for all 5 tasks
+        ├── Methodology.jsx      # Pipeline breakdown per task
+        ├── About.jsx
+        └── NotFound.jsx
+```
 
 ---
 
-## 🛠 Tech Stack
-<p align="left">
-<img src="https://skillicons.dev/icons?i=html,css,js,python,flask,mysql,aws,figma,linux,unity,unreal,blender" />
-</p>
+## 3. What currently uses demo data
+
+**Every prediction in this build is simulated on the client** — there is no Python/FastAPI/Flask backend
+wired up. All simulated logic is isolated in **`src/lib/demoEngine.js`**:
+
+| Function | Powers |
+|---|---|
+| `predictHousePrice()` | Task 01 — House Price Prediction |
+| `generateCustomerDataset()`, `classifyCustomer()` | Task 02 — Customer Segmentation |
+| `classifyCatDog()` | Task 03 — Cat vs Dog Classification |
+| `classifyGesture()` | Task 04 — Hand Gesture Recognition |
+| `analyzeFoodImage()` | Task 05 — Food Recognition |
+
+Every result screen carries a visible **"Demo Prediction" / "Demo Classification" / "Demo Recognition" /
+"Demo AI Analysis"** badge so it's always clear to a viewer (or a jury) that no real trained model produced
+the number on screen. The camera on the Hand Gesture page is a **real** browser camera feed — only the
+gesture classification itself is simulated.
 
 ---
 
-## 📊 AI GitHub Analytics
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=yd2777&show_icons=true&theme=tokyonight&hide_border=true" />
-</p>
+## 4. Connecting a real ML backend
 
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=yd2777&theme=tokyonight&hide_border=true" />
-</p>
+The frontend is intentionally decoupled from the "model" logic so a real backend can be dropped in without
+touching any page component:
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=yd2777&layout=compact&theme=tokyonight&hide_border=true" />
-</p>
+1. Build a Python API (FastAPI or Flask is a natural fit) with one endpoint per task, e.g.
+   `POST /api/house-price`, `POST /api/customer-segment`, `POST /api/classify/cat-dog`,
+   `POST /api/classify/gesture`, `POST /api/classify/food`.
+2. In `src/lib/demoEngine.js`, replace the body of the relevant function with a `fetch()` call to your
+   endpoint, keeping the same return shape (e.g. `predictHousePrice` should still resolve to
+   `{ price, confidence, range, breakdown }`).
+3. Remove or relabel the "Demo Prediction" badges in `src/components/UI.jsx` once real inference is live.
+4. If you want real accuracy metrics, populate them on `src/pages/Results.jsx` — the project intentionally
+   avoids inventing accuracy numbers.
+
+Example swap for house price prediction:
+
+```js
+// Before (demo):
+export function predictHousePrice(input) {
+  // local calculation…
+}
+
+// After (real backend):
+export async function predictHousePrice(input) {
+  const res = await fetch('/api/house-price', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(input),
+  })
+  return res.json() // must resolve to { price, confidence, range, breakdown }
+}
+```
 
 ---
 
-## 📈 Contribution Graph
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=yd2777&theme=tokyo-night" />
-</p>
+## 5. Jury Demo Mode
+
+Click **"Start Jury Demo"** in the sidebar, topbar, or home page to open a guided modal that steps through
+all five tasks in order. Each step shows a short explanation, a **Run Demo** button that produces a live
+(simulated) result, and **Next / Back** controls — designed for presenting to a professor or panel without
+needing to navigate the full app manually. "Open Full Page" on any step jumps to that task's real page.
 
 ---
 
-## 🧠 Quote (AI Mindset)
-> *"Build systems that work while you sleep."* ⚡
+## 6. Notes
 
----
-
-⭐ **If you like my work, give a star & follow — AI builders grow together**
+- Routing uses `HashRouter`, so the app works correctly from a static file server or `npm run preview`
+  without extra server configuration for client-side routes.
+- All charts (bar, pie, scatter) use Recharts and render from data in `src/lib/demoEngine.js` /
+  `src/data/projects.js` — no external API calls.
+- No real model accuracy, precision or recall values are shown anywhere in the UI, since no model has
+  actually been trained in this build.
